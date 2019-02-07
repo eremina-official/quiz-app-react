@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Quiz from './components/Quiz';
+
+/* QuizContainer has a state 
+   Navigation sends which question is to be rendered
+   QuestionConteiner recieves state from QuizContainer and renders question
+*/
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+
+        <header className="header">
+          <p className="header__title">Quiz historyczny</p>
+          <p className="header__credits">Żródło zdjęć: Wikimedia Commons</p>
         </header>
+
+        <h1>Zgadnij kim jest ta postać</h1>
+
+        <div className="quiz-container">
+
+          <Quiz />
+
+        </div>
+
       </div>
     );
   }
