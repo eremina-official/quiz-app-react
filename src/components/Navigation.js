@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Navigation = () => {
+const Navigation = (props) => {
   return (
-    <div className="navigation">
+    <div className="navigation" onClick={props.onClick}>
       <div className="prev">Wstecz</div>
       <div className="next">Do przodu</div>
     </div>
