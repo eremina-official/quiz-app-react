@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Navigation from './Navigation';
 import Question from './Question';
+import Result from './Result';
 import questionsData from '../questions-data';
+import classNames from '../classNames';
 
 
 class Quiz extends Component {
@@ -9,59 +11,78 @@ class Quiz extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      currentQuestionIndex: 0,
       questionsData: questionsData,
-      classNames: [
-                   {
-                    answerOne: 'answer',
-                    answerTwo: 'answer',
-                    answerThree: 'answer',
-                    done: ''
-                   },
-                   {
-                    answerOne: 'answer',
-                    answerTwo: 'answer',
-                    answerThree: 'answer',
-                    done: ''
-                   },
-                  ]
+      classNames: classNames
     };
   }
 
-  renderQuestion(i) {
+  renderQuestion(currentQuestionIndex) {
     return (
       <Question 
-        value={this.state.questionsData[i]}
-        answers={this.state.classNames[i]}
-        onClick={(e) => this.handleClick(i, e)}
+        value={this.state.questionsData[currentQuestionIndex]}
+        answers={this.state.classNames[currentQuestionIndex]}
+        onClick={(e) => this.handleQuestionClick(currentQuestionIndex, e)}
       />
     );
   }
 
-  handleClick(i, e) {
+  renderResult() {
+    return (
+      <Result
+      />
+    );
+  }
 
-    if (e.target.tagName === 'LI' && this.state.classNames[i].done === '') {
+  handleNavigationClick(e) {
+    let currentQuestionIndex = this.state.currentQuestionIndex;
+
+    if (e.target.className === 'prev' && this.state.currentQuestionIndex > 0) {
+      currentQuestionIndex = currentQuestionIndex - 1;
+    }
+
+    if (e.target.className === 'next' && this.state.currentQuestionIndex < 2) {
+      currentQuestionIndex = currentQuestionIndex + 1;
+    }
+
+    this.setState({currentQuestionIndex: currentQuestionIndex});
+  }
+
+  handleQuestionClick(currentQuestionIndex, e) {
+
+    if (e.target.tagName === 'LI' && this.state.classNames[currentQuestionIndex].done === '') {
 
       const classNames = this.state.classNames.slice();
       let objectKeyTarget = e.target.id;
 
-      if (e.target.textContent === this.state.questionsData[i].correctVariant) {
-        classNames[i][objectKeyTarget] = 'answer right';
+      if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
+        classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
       } else {
-        classNames[i][objectKeyTarget] = 'answer wrong';
+        classNames[currentQuestionIndex][objectKeyTarget] = 'answer wrong';
       }
-      classNames[i].done = 'question-is-done';
+
+      classNames[currentQuestionIndex].done = 'question-is-done';
       this.setState({classNames: classNames});
       console.log(this.state.classNames);
-      console.log(i)
+      console.log(currentQuestionIndex)
     }
   }
 
   render() {
+    let currentQuestionIndex = this.state.currentQuestionIndex;
+    let questionsNumber = this.state.questionsData.length - 1;
+    let questionOrResult;
+
+    if (currentQuestionIndex > questionsNumber) {
+      questionOrResult = this.renderResult();
+    } else {
+      questionOrResult = this.renderQuestion(currentQuestionIndex);
+    }
+
     return (
       <div>
-        <Navigation />
-        {this.renderQuestion(0)}
-        {this.renderQuestion(1)}
+        <Navigation onClick={(e) => this.handleNavigationClick(e)} />
+        {questionOrResult}
       </div>
     );
   }
