@@ -73,3 +73,9 @@ h1 {
 .answer.wrong {
   background-color: red;
 }
+
+@media only screen and (min-width: 700px) {
+  .navigation-bottom {
+    display: none;
+  }
+}
