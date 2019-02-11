@@ -111,6 +111,7 @@ class Quiz extends Component {
       <div>
         <Navigation onClick={(e) => this.handleNavigationClick(e)} />
         {questionOrResult}
+        <Navigation className="navigation navigation-bottom" onClick={(e) => this.handleNavigationClick(e)} />
       </div>
     );
   }
