@@ -12,6 +12,8 @@ class Quiz extends Component {
     super(props);
     this.state = {
       currentQuestionIndex: 0,
+      counterRight: 0,
+      counterWrong: 0,
       questionsData: questionsData,
       classNames: classNames
     };
@@ -28,9 +30,19 @@ class Quiz extends Component {
   }
 
   renderResult() {
+    let totalAnswerCount = this.state.counterRight + this.state.counterWrong;
+    let result;
+
+    if (totalAnswerCount === this.state.questionsData.length) {
+      result = <Result counterRight={this.state.counterRight} questionNumber={this.state.questionsData.length} />
+    } else {
+      result = <Result message={'Proszę odpowiedzieć na wszystkie pytania.'} />
+    }
+
     return (
-      <Result
-      />
+      <div>
+        {result}
+      </div>
     );
   }
 
@@ -54,17 +66,33 @@ class Quiz extends Component {
 
       const classNames = this.state.classNames.slice();
       let objectKeyTarget = e.target.id;
+      console.log(e.target.textContent);
+      console.log(this.state.questionsData[currentQuestionIndex].correctVariant);
 
       if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
         classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
+        this.runCounter('right');
       } else {
         classNames[currentQuestionIndex][objectKeyTarget] = 'answer wrong';
+        this.runCounter('wrong');
       }
 
       classNames[currentQuestionIndex].done = 'question-is-done';
       this.setState({classNames: classNames});
-      console.log(this.state.classNames);
-      console.log(currentQuestionIndex)
+    }
+  }
+
+  runCounter(counter) {
+    let { counterRight, counterWrong } = this.state;
+    
+    if (counter === 'right') {
+      counterRight = counterRight + 1;
+      this.setState({counterRight: counterRight});
+      console.log(counterRight)
+    } else {
+      counterWrong = counterWrong + 1;
+      this.setState({counterWrong: counterWrong});
+      console.log(counterWrong)
     }
   }
 
