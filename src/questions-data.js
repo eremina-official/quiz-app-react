@@ -24,7 +24,7 @@ const questionsData = [
                 'Georges Clemenceau',
                 'Friedrich Engels'
               ],
-    correctVariantIndex: 2,
+    correctVariant: 'Friedrich Engels',
     description: 'Filozof i ideolog komunistyczny. Jeden z wspołtwórców komunizmu.'
   }
 ];
