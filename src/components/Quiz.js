@@ -34,9 +34,16 @@ class Quiz extends Component {
     let result;
 
     if (totalAnswerCount === this.state.questionsData.length) {
-      result = <Result counterRight={this.state.counterRight} questionNumber={this.state.questionsData.length} />
+      result = <Result 
+                counterRight={this.state.counterRight} 
+                questionNumber={this.state.questionsData.length} 
+                onClick={(e) => this.handleResetQuizClick(e)}
+               />
     } else {
-      result = <Result message={'Proszę odpowiedzieć na wszystkie pytania.'} />
+      result = <Result 
+                message={'Proszę odpowiedzieć na wszystkie pytania.'} 
+                onClick={(e) => this.handleResetQuizClick(e)}
+               />
     }
 
     return (
@@ -49,11 +56,11 @@ class Quiz extends Component {
   handleNavigationClick(e) {
     let currentQuestionIndex = this.state.currentQuestionIndex;
 
-    if (e.target.className === 'prev' && this.state.currentQuestionIndex > 0) {
+    if (e.target.className === 'prev' && currentQuestionIndex > 0) {
       currentQuestionIndex = currentQuestionIndex - 1;
     }
 
-    if (e.target.className === 'next' && this.state.currentQuestionIndex < 2) {
+    if (e.target.className === 'next' && currentQuestionIndex < 2) {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
 
@@ -96,6 +103,30 @@ class Quiz extends Component {
     }
   }
 
+  handleResetQuizClick(e) {
+    if (e.target.className === 'button-reset') {
+      let { currentQuestionIndex, counterRight, counterWrong, classNames } = this.state;
+
+      currentQuestionIndex = 0;
+      counterRight = 0;
+      counterWrong = 0;
+
+      classNames.forEach((item) => {
+        item.answerOne = 'answer';
+        item.answerTwo = 'answer';
+        item.answerThree = 'answer';
+        item.done = '';
+      });
+
+      this.setState({
+        currentQuestionIndex: currentQuestionIndex,
+        counterRight: counterRight,
+        counterWrong: counterWrong,
+        classNames: classNames
+      });
+    }
+  }
+
   render() {
     let currentQuestionIndex = this.state.currentQuestionIndex;
     let questionsNumber = this.state.questionsData.length - 1;
@@ -109,7 +140,7 @@ class Quiz extends Component {
 
     return (
       <div>
-        <Navigation onClick={(e) => this.handleNavigationClick(e)} />
+        <Navigation className="navigation" onClick={(e) => this.handleNavigationClick(e)} />
         {questionOrResult}
         <Navigation className="navigation navigation-bottom" onClick={(e) => this.handleNavigationClick(e)} />
       </div>
