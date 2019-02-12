@@ -15,7 +15,7 @@ class App extends Component {
 
         <header className="header">
           <p className="header__title">Quiz historyczny</p>
-          <p className="header__credits">Żródło zdjęć: Wikimedia Commons</p>
+          <p className="header__credits">Żródło zdjęć: <br></br> Wikimedia Commons</p>
         </header>
 
         <h1>Zgadnij kim jest ta postać</h1>
