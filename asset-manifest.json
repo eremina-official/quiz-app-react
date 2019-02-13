@@ -1,7 +1,7 @@
 {
-  "main.css": "/quiz-app-react/static/css/main.84d319f7.chunk.css",
-  "main.js": "/quiz-app-react/static/js/main.5efc0d49.chunk.js",
-  "main.js.map": "/quiz-app-react/static/js/main.5efc0d49.chunk.js.map",
+  "main.css": "/quiz-app-react/static/css/main.d5ee975f.chunk.css",
+  "main.js": "/quiz-app-react/static/js/main.58b5396c.chunk.js",
+  "main.js.map": "/quiz-app-react/static/js/main.58b5396c.chunk.js.map",
   "static/js/1.e2c94d64.chunk.js": "/quiz-app-react/static/js/1.e2c94d64.chunk.js",
   "static/js/1.e2c94d64.chunk.js.map": "/quiz-app-react/static/js/1.e2c94d64.chunk.js.map",
   "runtime~main.js": "/quiz-app-react/static/js/runtime~main.3ee22322.js",
@@ -14,8 +14,8 @@
   "static/media/Thatcher.jpg": "/quiz-app-react/static/media/Thatcher.b9f0d2f9.jpg",
   "static/media/Tito.jpg": "/quiz-app-react/static/media/Tito.c79041c1.jpg",
   "static/media/Engels.jpg": "/quiz-app-react/static/media/Engels.ef065ba2.jpg",
-  "static/css/main.84d319f7.chunk.css.map": "/quiz-app-react/static/css/main.84d319f7.chunk.css.map",
+  "static/css/main.d5ee975f.chunk.css.map": "/quiz-app-react/static/css/main.d5ee975f.chunk.css.map",
   "index.html": "/quiz-app-react/index.html",
-  "precache-manifest.e663325dc546459823e164aec58a1c44.js": "/quiz-app-react/precache-manifest.e663325dc546459823e164aec58a1c44.js",
+  "precache-manifest.29e06dd46dbcd7ae0e9c23049a2c5e67.js": "/quiz-app-react/precache-manifest.29e06dd46dbcd7ae0e9c23049a2c5e67.js",
   "service-worker.js": "/quiz-app-react/service-worker.js"
 }
