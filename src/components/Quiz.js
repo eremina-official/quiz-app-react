@@ -15,7 +15,8 @@ class Quiz extends Component {
       counterRight: 0,
       counterWrong: 0,
       questionsData: questionsData,
-      classNames: classNames
+      classNames: classNames,
+      imageClassName: 'question__image'
     };
   }
 
