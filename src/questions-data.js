@@ -89,7 +89,7 @@ const questionsData = [
   {
     number: 7,
     image: ThatcherImage,
-    hint: 'Wskazówka: nazywano ją  &#x201EŻelazną Damą&#x201D.',
+    hint: 'Wskazówka: nazywano ją  „Żelazną Damą”.',
     variants: [ 
                 'Eva Peron', 
                 'Margaret Thatcher', 
