@@ -86,8 +86,6 @@ class Quiz extends Component {
 
       const classNames = this.state.classNames.slice();
       let objectKeyTarget = e.target.id;
-      console.log(e.target.textContent);
-      console.log(this.state.questionsData[currentQuestionIndex].correctVariant);
 
       if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
         classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
@@ -108,11 +106,9 @@ class Quiz extends Component {
     if (counter === 'right') {
       counterRight = counterRight + 1;
       this.setState({counterRight: counterRight});
-      console.log(counterRight)
     } else {
       counterWrong = counterWrong + 1;
       this.setState({counterWrong: counterWrong});
-      console.log(counterWrong)
     }
   }
 
