@@ -16,7 +16,7 @@ class Quiz extends Component {
       counterWrong: 0,
       questionsData: questionsData,
       classNames: classNames,
-      imageClassName: 'question__image'
+      imageClassName: 'question__image visible'
     };
   }
 
@@ -24,7 +24,8 @@ class Quiz extends Component {
     return (
       <Question 
         value={this.state.questionsData[currentQuestionIndex]}
-        answers={this.state.classNames[currentQuestionIndex]}
+        answers={this.state.classNames[currentQuestionIndex]} 
+        imageClassName={this.state.imageClassName}
         onClick={(e) => this.handleQuestionClick(currentQuestionIndex, e)}
       />
     );
@@ -55,17 +56,28 @@ class Quiz extends Component {
   }
 
   handleNavigationClick(e) {
+    let imageClassName = this.state.imageClassName;
+    imageClassName = 'question__image';
+
     let currentQuestionIndex = this.state.currentQuestionIndex;
 
     if (e.target.className === 'prev' && currentQuestionIndex > 0) {
       currentQuestionIndex = currentQuestionIndex - 1;
     }
 
-    if (e.target.className === 'next' && currentQuestionIndex < 2) {
+    if (e.target.className === 'next' && currentQuestionIndex < this.state.questionsData.length) {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
 
-    this.setState({currentQuestionIndex: currentQuestionIndex});
+    this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
+  }
+
+  handleImageLoad() {
+    let imageClassName = this.state.imageClassName;
+    imageClassName = 'question__image visible';
+    /* although handleImageLoad() is passed as a callback, the animation defined for the visible class
+    does not work properly without setting this class for the image with a setTimeout() method */
+    setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 100);
   }
 
   handleQuestionClick(currentQuestionIndex, e) {
