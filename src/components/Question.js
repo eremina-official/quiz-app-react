@@ -8,7 +8,7 @@ const Question = (props) => {
       <div className="question">
         <p className="question__number">Pytanie {props.value.number} z 8</p>
     
-        <img src={props.value.image} alt="person" className="question__image" />
+        <img src={props.value.image} alt="person" className={props.imageClassName} />
   
         <p className="question__hint"> {props.value.hint} </p>
   
