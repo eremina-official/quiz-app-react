@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Navigation from './Navigation';
 import Question from './Question';
 import Result from './Result';
-import questionsData from '../questions-data';
-import classNames from '../classNames';
+import questionsData from '../quiz-data/questions-data';
+import classNames from '../quiz-data/classNames';
 
 class Quiz extends Component {
   constructor(props) {
