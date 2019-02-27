@@ -5,7 +5,6 @@ import Result from './Result';
 import questionsData from '../questions-data';
 import classNames from '../classNames';
 
-
 class Quiz extends Component {
 
   constructor(props) {
@@ -77,7 +76,7 @@ class Quiz extends Component {
     imageClassName = 'question__image visible';
     /* although handleImageLoad() is passed as a callback, the animation defined for the visible class
     does not work properly without setting this class for the image with a setTimeout() method */
-    setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 100);
+    setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 50);
   }
 
   handleQuestionClick(currentQuestionIndex, e) {
