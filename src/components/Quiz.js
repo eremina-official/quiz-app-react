@@ -6,7 +6,6 @@ import questionsData from '../questions-data';
 import classNames from '../classNames';
 
 class Quiz extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -78,7 +77,6 @@ class Quiz extends Component {
   }
 
   handleQuestionClick(currentQuestionIndex, e) {
-
     if (e.target.tagName === 'LI' && this.state.classNames[currentQuestionIndex].done === '') {
 
       const classNames = this.state.classNames.slice();
@@ -99,7 +97,6 @@ class Quiz extends Component {
 
   runCounter(counter) {
     let { counterRight, counterWrong } = this.state;
-    
     if (counter === 'right') {
       counterRight = counterRight + 1;
       this.setState({counterRight: counterRight});
@@ -112,16 +109,15 @@ class Quiz extends Component {
   handleResetQuizClick(e) {
     if (e.target.className === 'button-reset') {
       let { currentQuestionIndex, counterRight, counterWrong, classNames } = this.state;
-
       currentQuestionIndex = 0;
       counterRight = 0;
       counterWrong = 0;
-
-      classNames.forEach((item) => {
+      classNames = classNames.map(item => {
         item.answerOne = 'answer';
         item.answerTwo = 'answer';
         item.answerThree = 'answer';
         item.done = '';
+        return item;
       });
 
       this.setState({
