@@ -129,21 +129,24 @@ class Quiz extends Component {
     }
   }
 
-  render() {
+  getQuestionOrResult() {
     let currentQuestionIndex = this.state.currentQuestionIndex;
     let questionsNumber = this.state.questionsData.length - 1;
-    let questionOrResult;
+    let questionOrResult
 
     if (currentQuestionIndex > questionsNumber) {
       questionOrResult = this.renderResult();
     } else {
       questionOrResult = this.renderQuestion(currentQuestionIndex);
     }
+    return questionOrResult;
+  }
 
+  render() {
     return (
       <div>
         <Navigation className="navigation" onClick={(e) => this.handleNavigationClick(e)} />
-        {questionOrResult}
+        {this.getQuestionOrResult()}
         <Navigation className="navigation navigation-bottom" onClick={(e) => this.handleNavigationClick(e)} />
       </div>
     );
