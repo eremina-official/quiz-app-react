@@ -74,7 +74,7 @@ h1 {
 
 .visible {
   animation-name: makevisible;
-  animation-duration: 0.3s;
+  animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
 
