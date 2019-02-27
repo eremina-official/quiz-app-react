@@ -1,11 +1,11 @@
-import NapoleonImage from './assets/Napoleon.jpg';
-import EngelsImage from './assets/Engels.jpg';
-import GenghisImage from './assets/Genghis.jpg';
-import ZumaImage from './assets/Zuma.jpg';
-import CharlemagneImage from './assets/Charlemagne.jpg';
-import AlexanderImage from './assets/Alexander-the-Great.jpg';
-import ThatcherImage from './assets/Thatcher.jpg';
-import TitoImage from './assets/Tito.jpg';
+import NapoleonImage from '../assets/Napoleon.jpg';
+import EngelsImage from '../assets/Engels.jpg';
+import GenghisImage from '../assets/Genghis.jpg';
+import ZumaImage from '../assets/Zuma.jpg';
+import CharlemagneImage from '../assets/Charlemagne.jpg';
+import AlexanderImage from '../assets/Alexander-the-Great.jpg';
+import ThatcherImage from '../assets/Thatcher.jpg';
+import TitoImage from '../assets/Tito.jpg';
 
 const questionsData = [
   {
