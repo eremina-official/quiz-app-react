@@ -55,9 +55,6 @@ class Quiz extends Component {
   }
 
   handleNavigationClick(e) {
-    let imageClassName = this.state.imageClassName;
-    imageClassName = 'question__image';
-
     let currentQuestionIndex = this.state.currentQuestionIndex;
 
     if (e.target.className === 'prev' && currentQuestionIndex > 0) {
@@ -68,6 +65,7 @@ class Quiz extends Component {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
 
+    let imageClassName = 'question__image';
     this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
   }
 
