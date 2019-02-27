@@ -54,14 +54,12 @@ class Quiz extends Component {
 
   handleNavigationClick(e) {
     let currentQuestionIndex = this.state.currentQuestionIndex;
-
     if (e.target.className === 'prev' && currentQuestionIndex > 0) {
       currentQuestionIndex = currentQuestionIndex - 1;
     }
     if (e.target.className === 'next' && currentQuestionIndex < this.state.questionsData.length) {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
-
     const imageClassName = 'question__image';
     this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
   }
@@ -75,10 +73,18 @@ class Quiz extends Component {
 
   handleQuestionClick(currentQuestionIndex, e) {
     if (e.target.tagName === 'LI' && this.state.classNames[currentQuestionIndex].done === '') {
+    /* When an array of objects is copied with .slice() method 
+       or with a spread operator (const classNames = [...this.state.classNames]) 
+       the properties of the objects in the new array should not be changed directly via an assignment 
+       because it will change these values in the this.state as well. Instead assign the properties 
+       to variables, change the variables and call setState(). */
+      
       const classNames = this.state.classNames.slice();
+      classNames[currentQuestionIndex] = { ...classNames[currentQuestionIndex] };
       const objectKeyTarget = e.target.id;
 
       if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
+        /* bracket notation is used to embed a variable */
         classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
         this.runCounter('right');
       } else {
@@ -94,6 +100,9 @@ class Quiz extends Component {
   runCounter(counter) {
     let { counterRight, counterWrong } = this.state;
     if (counter === 'right') {
+      /* Direct assignment here is valid because we copied the counterRight 
+      to a separate variable and primitive data types in JavaScript are copied 
+      by value (not by reference) */
       counterRight = counterRight + 1;
       this.setState({counterRight: counterRight});
     } else {
