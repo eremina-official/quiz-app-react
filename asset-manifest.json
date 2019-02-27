@@ -1,7 +1,7 @@
 {
   "main.css": "/quiz-app-react/static/css/main.696fff00.chunk.css",
-  "main.js": "/quiz-app-react/static/js/main.53671a77.chunk.js",
-  "main.js.map": "/quiz-app-react/static/js/main.53671a77.chunk.js.map",
+  "main.js": "/quiz-app-react/static/js/main.5ada89a7.chunk.js",
+  "main.js.map": "/quiz-app-react/static/js/main.5ada89a7.chunk.js.map",
   "static/js/1.e2c94d64.chunk.js": "/quiz-app-react/static/js/1.e2c94d64.chunk.js",
   "static/js/1.e2c94d64.chunk.js.map": "/quiz-app-react/static/js/1.e2c94d64.chunk.js.map",
   "runtime~main.js": "/quiz-app-react/static/js/runtime~main.3ee22322.js",
@@ -16,6 +16,6 @@
   "static/media/Engels.jpg": "/quiz-app-react/static/media/Engels.ef065ba2.jpg",
   "static/css/main.696fff00.chunk.css.map": "/quiz-app-react/static/css/main.696fff00.chunk.css.map",
   "index.html": "/quiz-app-react/index.html",
-  "precache-manifest.dc89184f1e847c6d168025399b7aa58f.js": "/quiz-app-react/precache-manifest.dc89184f1e847c6d168025399b7aa58f.js",
+  "precache-manifest.7587dafe2e59cf7dbe222f79485cf628.js": "/quiz-app-react/precache-manifest.7587dafe2e59cf7dbe222f79485cf628.js",
   "service-worker.js": "/quiz-app-react/service-worker.js"
 }
