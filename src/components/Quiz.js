@@ -30,9 +30,8 @@ class Quiz extends Component {
   }
 
   renderResult() {
-    let totalAnswerCount = this.state.counterRight + this.state.counterWrong;
+    const totalAnswerCount = this.state.counterRight + this.state.counterWrong;
     let result;
-
     if (totalAnswerCount === this.state.questionsData.length) {
       result = <Result 
                 counterRight={this.state.counterRight} 
@@ -59,18 +58,16 @@ class Quiz extends Component {
     if (e.target.className === 'prev' && currentQuestionIndex > 0) {
       currentQuestionIndex = currentQuestionIndex - 1;
     }
-
     if (e.target.className === 'next' && currentQuestionIndex < this.state.questionsData.length) {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
 
-    let imageClassName = 'question__image';
+    const imageClassName = 'question__image';
     this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
   }
 
   handleImageLoad() {
-    let imageClassName = this.state.imageClassName;
-    imageClassName = 'question__image visible';
+    const imageClassName = 'question__image visible';
     /* although handleImageLoad() is passed as a callback, the animation defined for the visible class
     does not work properly without setting this class for the image with a setTimeout() method */
     setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 50);
@@ -78,9 +75,8 @@ class Quiz extends Component {
 
   handleQuestionClick(currentQuestionIndex, e) {
     if (e.target.tagName === 'LI' && this.state.classNames[currentQuestionIndex].done === '') {
-
       const classNames = this.state.classNames.slice();
-      let objectKeyTarget = e.target.id;
+      const objectKeyTarget = e.target.id;
 
       if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
         classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
@@ -108,11 +104,10 @@ class Quiz extends Component {
 
   handleResetQuizClick(e) {
     if (e.target.className === 'button-reset') {
-      let { currentQuestionIndex, counterRight, counterWrong, classNames } = this.state;
-      currentQuestionIndex = 0;
-      counterRight = 0;
-      counterWrong = 0;
-      classNames = classNames.map(item => {
+      const currentQuestionIndex = 0;
+      const counterRight = 0;
+      const counterWrong = 0;
+      const classNames = this.state.classNames.map(item => {
         item.answerOne = 'answer';
         item.answerTwo = 'answer';
         item.answerThree = 'answer';
@@ -130,10 +125,9 @@ class Quiz extends Component {
   }
 
   getQuestionOrResult() {
-    let currentQuestionIndex = this.state.currentQuestionIndex;
-    let questionsNumber = this.state.questionsData.length - 1;
+    const currentQuestionIndex = this.state.currentQuestionIndex;
+    const questionsNumber = this.state.questionsData.length - 1;
     let questionOrResult
-
     if (currentQuestionIndex > questionsNumber) {
       questionOrResult = this.renderResult();
     } else {
@@ -151,7 +145,6 @@ class Quiz extends Component {
       </div>
     );
   }
-
 }
 
 export default Quiz;
