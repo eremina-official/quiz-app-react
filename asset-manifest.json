@@ -1,9 +1,9 @@
 {
-  "main.css": "/quiz-app-react/static/css/main.696fff00.chunk.css",
-  "main.js": "/quiz-app-react/static/js/main.5ada89a7.chunk.js",
-  "main.js.map": "/quiz-app-react/static/js/main.5ada89a7.chunk.js.map",
-  "static/js/1.e2c94d64.chunk.js": "/quiz-app-react/static/js/1.e2c94d64.chunk.js",
-  "static/js/1.e2c94d64.chunk.js.map": "/quiz-app-react/static/js/1.e2c94d64.chunk.js.map",
+  "main.css": "/quiz-app-react/static/css/main.efebbf5c.chunk.css",
+  "main.js": "/quiz-app-react/static/js/main.8aa7596d.chunk.js",
+  "main.js.map": "/quiz-app-react/static/js/main.8aa7596d.chunk.js.map",
+  "static/js/1.7da9900a.chunk.js": "/quiz-app-react/static/js/1.7da9900a.chunk.js",
+  "static/js/1.7da9900a.chunk.js.map": "/quiz-app-react/static/js/1.7da9900a.chunk.js.map",
   "runtime~main.js": "/quiz-app-react/static/js/runtime~main.3ee22322.js",
   "runtime~main.js.map": "/quiz-app-react/static/js/runtime~main.3ee22322.js.map",
   "static/media/Napoleon.jpg": "/quiz-app-react/static/media/Napoleon.9e43fe34.jpg",
@@ -14,8 +14,8 @@
   "static/media/Thatcher.jpg": "/quiz-app-react/static/media/Thatcher.b9f0d2f9.jpg",
   "static/media/Tito.jpg": "/quiz-app-react/static/media/Tito.c79041c1.jpg",
   "static/media/Engels.jpg": "/quiz-app-react/static/media/Engels.ef065ba2.jpg",
-  "static/css/main.696fff00.chunk.css.map": "/quiz-app-react/static/css/main.696fff00.chunk.css.map",
+  "static/css/main.efebbf5c.chunk.css.map": "/quiz-app-react/static/css/main.efebbf5c.chunk.css.map",
   "index.html": "/quiz-app-react/index.html",
-  "precache-manifest.7587dafe2e59cf7dbe222f79485cf628.js": "/quiz-app-react/precache-manifest.7587dafe2e59cf7dbe222f79485cf628.js",
+  "precache-manifest.57410045954424e281ded154b9610a7a.js": "/quiz-app-react/precache-manifest.57410045954424e281ded154b9610a7a.js",
   "service-worker.js": "/quiz-app-react/service-worker.js"
 }
