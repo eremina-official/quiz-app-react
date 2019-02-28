@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Question = ( {
-    value: { number, image, hint, variants, correctVariant, description }, 
-    answers: { answerOne, answerTwo, answerThree, done }, 
+    questionsData: { number, image, hint, variants, correctVariant, description }, 
+    classNames: { answerOne, answerTwo, answerThree, done }, 
     imageClassName, 
     onClick
   }

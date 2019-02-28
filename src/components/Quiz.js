@@ -21,8 +21,8 @@ class Quiz extends Component {
   renderQuestion(currentQuestionIndex) {
     return (
       <Question 
-        value={this.state.questionsData[currentQuestionIndex]}
-        answers={this.state.classNames[currentQuestionIndex]} 
+        questionsData={this.state.questionsData[currentQuestionIndex]}
+        classNames={this.state.classNames[currentQuestionIndex]} 
         imageClassName={this.state.imageClassName}
         onClick={(e) => this.handleQuestionClick(currentQuestionIndex, e)}
       />
@@ -78,7 +78,6 @@ class Quiz extends Component {
        the properties of the objects in the new array should not be changed directly via an assignment 
        because it will change these values in the this.state as well. Instead assign the properties 
        to variables, change the variables and call setState(). */
-      
       const classNames = this.state.classNames.slice();
       classNames[currentQuestionIndex] = { ...classNames[currentQuestionIndex] };
       const objectKeyTarget = e.target.id;
