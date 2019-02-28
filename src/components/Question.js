@@ -1,8 +1,6 @@
 import React from 'react';
 
-
 const Question = (props) => {
-
   return (
     <div className={props.answers.done} onClick={props.onClick}>
       <div className="question">
@@ -27,7 +25,6 @@ const Question = (props) => {
       </div>
     </div>
   );
-  
 };
 
 export default Question;
