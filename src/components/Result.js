@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Result = (props) => {
+const Result = ( { questionNumber, message, counterRight, onClick } ) => {
   return (
-    <div onClick={props.onClick}>
-      <p className="no-result">{props.message}</p>
+    <div onClick={onClick}>
+      <p className="no-result">{message}</p>
 
-      { props.questionNumber &&
-      <p className="result">Wynik: {props.counterRight} z {props.questionNumber}.</p> }
+      { questionNumber &&
+      <p className="result">Wynik: {counterRight} z {questionNumber}.</p> }
 
       <div className="button-reset">Reset quiz</div>
     </div>

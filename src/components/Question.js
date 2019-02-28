@@ -1,25 +1,32 @@
 import React from 'react';
 
-const Question = (props) => {
+const Question = ( {
+    value: { number, image, hint, variants, correctVariant, description }, 
+    answers: { answerOne, answerTwo, answerThree, done }, 
+    imageClassName, 
+    onClick
+  }
+
+) => {
   return (
-    <div className={props.answers.done} onClick={props.onClick}>
+    <div className={done} onClick={onClick}>
       <div className="question">
-        <p className="question__number">Pytanie {props.value.number} z 8</p>
+        <p className="question__number">Pytanie {number} z 8</p>
     
-        <img src={props.value.image} alt="person" className={props.imageClassName} />
+        <img src={image} alt="person" className={imageClassName} />
   
-        <p className="question__hint"> {props.value.hint} </p>
+        <p className="question__hint"> {hint} </p>
   
         <ul className="question__variants">
-          <li id="answerOne" className={props.answers.answerOne}>{props.value.variants[0]}</li>
-          <li id="answerTwo" className={props.answers.answerTwo}>{props.value.variants[1]}</li>
-          <li id="answerThree" className={props.answers.answerThree}>{props.value.variants[2]}</li>
+          <li id="answerOne" className={answerOne}>{variants[0]}</li>
+          <li id="answerTwo" className={answerTwo}>{variants[1]}</li>
+          <li id="answerThree" className={answerThree}>{variants[2]}</li>
         </ul>
   
-        { props.answers.done &&
+        { done &&
           <div className="description">
-            <p className="description__title">{props.value.correctVariant}</p>
-            <p>{props.value.description}</p>
+            <p className="description__title">{correctVariant}</p>
+            <p>{description}</p>
           </div>
         }
       </div>
