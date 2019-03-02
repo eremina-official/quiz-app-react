@@ -134,9 +134,9 @@ class Quiz extends Component {
 
   getQuestionOrResult() {
     const currentQuestionIndex = this.state.currentQuestionIndex;
-    const questionsNumber = this.state.questionsData.length - 1;
+    const closingQuestionIndex = this.state.questionsData.length - 1;
     let questionOrResult
-    if (currentQuestionIndex > questionsNumber) {
+    if (currentQuestionIndex > closingQuestionIndex) {
       questionOrResult = this.renderResult();
     } else {
       questionOrResult = this.renderQuestion(currentQuestionIndex);
