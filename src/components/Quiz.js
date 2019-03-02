@@ -110,27 +110,26 @@ class Quiz extends Component {
     }
   }
 
-  handleResetQuizClick(e) {
-    if (e.target.className === 'button-reset') {
-      const currentQuestionIndex = 0;
-      const counterRight = 0;
-      const counterWrong = 0;
-      const classNames = this.state.classNames.map(item => {
-        item.answerOne = 'answer';
-        item.answerTwo = 'answer';
-        item.answerThree = 'answer';
-        item.done = '';
-        return item;
-      });
+  handleResetQuizClick() {
+    const currentQuestionIndex = 0;
+    const counterRight = 0;
+    const counterWrong = 0;
+    const classNames = this.state.classNames.map(item => {
+      item.answerOne = 'answer';
+      item.answerTwo = 'answer';
+      item.answerThree = 'answer';
+      item.done = '';
+      return item;
+    });
 
-      this.setState({
-        currentQuestionIndex: currentQuestionIndex,
-        counterRight: counterRight,
-        counterWrong: counterWrong,
-        classNames: classNames
-      });
-    }
+    this.setState({
+      currentQuestionIndex: currentQuestionIndex,
+      counterRight: counterRight,
+      counterWrong: counterWrong,
+      classNames: classNames
+    });
   }
+  
 
   getQuestionOrResult() {
     const currentQuestionIndex = this.state.currentQuestionIndex;
