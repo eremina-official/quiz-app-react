@@ -8,7 +8,7 @@ const Question = (
     onClick 
   }
 
-  ) => {
+) => {
   return (
     <div className={done} onClick={onClick}>
       <div className="question">
