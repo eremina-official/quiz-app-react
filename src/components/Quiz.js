@@ -36,12 +36,12 @@ class Quiz extends Component {
       result = <Result 
                 counterRight={this.state.counterRight} 
                 questionNumber={this.state.questionsData.length} 
-                onClick={(e) => this.handleResetQuizClick(e)}
+                onClick={this.handleResetQuizClick}
                />
     } else {
       result = <Result 
                 message={'Proszę odpowiedzieć na wszystkie pytania.'} 
-                onClick={(e) => this.handleResetQuizClick(e)}
+                onClick={this.handleResetQuizClick}
                />
     }
 
