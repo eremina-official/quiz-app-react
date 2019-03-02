@@ -1,13 +1,14 @@
 import React from 'react';
 
-const Question = ( {
+const Question = ( 
+  { /* destructure props */
     questionsData: { number, image, hint, variants, correctVariant, description }, 
     classNames: { answerOne, answerTwo, answerThree, done }, 
     imageClassName, 
-    onClick
+    onClick 
   }
 
-) => {
+  ) => {
   return (
     <div className={done} onClick={onClick}>
       <div className="question">
