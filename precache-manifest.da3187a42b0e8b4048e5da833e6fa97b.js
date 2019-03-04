@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Genghis.a896be2e.jpg"
   },
   {
-    "revision": "8aa7596d408c312ac5d3",
-    "url": "/quiz-app-react/static/css/main.efebbf5c.chunk.css"
+    "revision": "c4f0723d56b162a9f13b",
+    "url": "/quiz-app-react/static/css/main.b6ea7dd3.chunk.css"
   },
   {
     "revision": "7da9900aadaa94233e69",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Engels.ef065ba2.jpg"
   },
   {
-    "revision": "8aa7596d408c312ac5d3",
-    "url": "/quiz-app-react/static/js/main.8aa7596d.chunk.js"
+    "revision": "c4f0723d56b162a9f13b",
+    "url": "/quiz-app-react/static/js/main.c4f0723d.chunk.js"
   },
   {
     "revision": "ecf00b93345c4975ca0f9bc6d12ff671",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Tito.c79041c1.jpg"
   },
   {
-    "revision": "acf5092108039a2fc5cd18f0ef6d74b4",
+    "revision": "d946a8335093e623173444f2e49dfcff",
     "url": "/quiz-app-react/index.html"
   }
 ];
