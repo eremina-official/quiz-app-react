@@ -36,12 +36,12 @@ class Quiz extends Component {
       result = <Result 
                 counterRight={this.state.counterRight} 
                 questionNumber={this.state.questionsData.length} 
-                onClick={this.handleResetQuizClick}
+                onClick={() => this.handleResetQuizClick()}
                />
     } else {
       result = <Result 
                 message={'Proszę odpowiedzieć na wszystkie pytania.'} 
-                onClick={this.handleResetQuizClick}
+                onClick={() => this.handleResetQuizClick()}
                />
     }
 
@@ -72,28 +72,30 @@ class Quiz extends Component {
   }
 
   handleQuestionClick(currentQuestionIndex, e) {
-    if (e.target.tagName === 'LI' && this.state.classNames[currentQuestionIndex].done === '') {
+    if (e.target.tagName !== 'LI' || this.state.classNames[currentQuestionIndex].done === 'question-is-done') {
+      return;
+    }
+    
     /* When an array of objects is copied with .slice() method 
        or with a spread operator (const classNames = [...this.state.classNames]) 
        the properties of the objects in the new array should not be changed directly via an assignment 
        because it will change these values in the this.state as well. Instead assign the properties 
        to variables, change the variables and call setState(). */
-      const classNames = this.state.classNames.slice();
-      classNames[currentQuestionIndex] = { ...classNames[currentQuestionIndex] };
-      const objectKeyTarget = e.target.id;
+    const classNames = this.state.classNames.slice();
+    classNames[currentQuestionIndex] = { ...classNames[currentQuestionIndex] };
+    const objectKeyTarget = e.target.id;
 
-      if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
-        /* bracket notation is used to embed a variable */
-        classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
-        this.runCounter('right');
-      } else {
-        classNames[currentQuestionIndex][objectKeyTarget] = 'answer wrong';
-        this.runCounter('wrong');
-      }
-
-      classNames[currentQuestionIndex].done = 'question-is-done';
-      this.setState({classNames: classNames});
+    if (e.target.textContent === this.state.questionsData[currentQuestionIndex].correctVariant) {
+      /* bracket notation is used to embed a variable */
+      classNames[currentQuestionIndex][objectKeyTarget] = 'answer right';
+      this.runCounter('right');
+    } else {
+      classNames[currentQuestionIndex][objectKeyTarget] = 'answer wrong';
+      this.runCounter('wrong');
     }
+
+    classNames[currentQuestionIndex].done = 'question-is-done';
+    this.setState({classNames: classNames});
   }
 
   runCounter(counter) {
