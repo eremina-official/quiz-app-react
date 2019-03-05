@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Genghis.a896be2e.jpg"
   },
   {
-    "revision": "c4f0723d56b162a9f13b",
-    "url": "/quiz-app-react/static/css/main.b6ea7dd3.chunk.css"
+    "revision": "b8a31e9fe62bf4776f38",
+    "url": "/quiz-app-react/static/css/main.2ba5c9df.chunk.css"
   },
   {
     "revision": "7da9900aadaa94233e69",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Engels.ef065ba2.jpg"
   },
   {
-    "revision": "c4f0723d56b162a9f13b",
-    "url": "/quiz-app-react/static/js/main.c4f0723d.chunk.js"
+    "revision": "b8a31e9fe62bf4776f38",
+    "url": "/quiz-app-react/static/js/main.b8a31e9f.chunk.js"
   },
   {
     "revision": "ecf00b93345c4975ca0f9bc6d12ff671",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Charlemagne.087c7840.jpg"
   },
   {
-    "revision": "447806524dfd22b25fde781b85a22da9",
-    "url": "/quiz-app-react/static/media/Alexander-the-Great.44780652.jpg"
+    "revision": "dba971feb84e0ec2c7f335fa4747de13",
+    "url": "/quiz-app-react/static/media/Alexander-the-Great.dba971fe.jpg"
   },
   {
     "revision": "b9f0d2f921f999bdfd30c70c831221bd",
@@ -48,7 +48,7 @@ self.__precacheManifest = [
     "url": "/quiz-app-react/static/media/Tito.c79041c1.jpg"
   },
   {
-    "revision": "d946a8335093e623173444f2e49dfcff",
+    "revision": "e71fef0744f79ef9c4f4e3b2759c134d",
     "url": "/quiz-app-react/index.html"
   }
 ];

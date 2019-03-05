@@ -1,7 +1,7 @@
 {
-  "main.css": "/quiz-app-react/static/css/main.b6ea7dd3.chunk.css",
-  "main.js": "/quiz-app-react/static/js/main.c4f0723d.chunk.js",
-  "main.js.map": "/quiz-app-react/static/js/main.c4f0723d.chunk.js.map",
+  "main.css": "/quiz-app-react/static/css/main.2ba5c9df.chunk.css",
+  "main.js": "/quiz-app-react/static/js/main.b8a31e9f.chunk.js",
+  "main.js.map": "/quiz-app-react/static/js/main.b8a31e9f.chunk.js.map",
   "static/js/1.7da9900a.chunk.js": "/quiz-app-react/static/js/1.7da9900a.chunk.js",
   "static/js/1.7da9900a.chunk.js.map": "/quiz-app-react/static/js/1.7da9900a.chunk.js.map",
   "runtime~main.js": "/quiz-app-react/static/js/runtime~main.3ee22322.js",
@@ -10,12 +10,12 @@
   "static/media/Genghis.jpg": "/quiz-app-react/static/media/Genghis.a896be2e.jpg",
   "static/media/Zuma.jpg": "/quiz-app-react/static/media/Zuma.ecf00b93.jpg",
   "static/media/Charlemagne.jpg": "/quiz-app-react/static/media/Charlemagne.087c7840.jpg",
-  "static/media/Alexander-the-Great.jpg": "/quiz-app-react/static/media/Alexander-the-Great.44780652.jpg",
+  "static/media/Alexander-the-Great.jpg": "/quiz-app-react/static/media/Alexander-the-Great.dba971fe.jpg",
   "static/media/Thatcher.jpg": "/quiz-app-react/static/media/Thatcher.b9f0d2f9.jpg",
   "static/media/Tito.jpg": "/quiz-app-react/static/media/Tito.c79041c1.jpg",
   "static/media/Engels.jpg": "/quiz-app-react/static/media/Engels.ef065ba2.jpg",
-  "static/css/main.b6ea7dd3.chunk.css.map": "/quiz-app-react/static/css/main.b6ea7dd3.chunk.css.map",
+  "static/css/main.2ba5c9df.chunk.css.map": "/quiz-app-react/static/css/main.2ba5c9df.chunk.css.map",
   "index.html": "/quiz-app-react/index.html",
-  "precache-manifest.da3187a42b0e8b4048e5da833e6fa97b.js": "/quiz-app-react/precache-manifest.da3187a42b0e8b4048e5da833e6fa97b.js",
+  "precache-manifest.e96e75590a2f9fecf0263e760e2517b8.js": "/quiz-app-react/precache-manifest.e96e75590a2f9fecf0263e760e2517b8.js",
   "service-worker.js": "/quiz-app-react/service-worker.js"
 }
