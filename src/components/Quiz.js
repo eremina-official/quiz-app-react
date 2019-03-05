@@ -18,6 +18,19 @@ class Quiz extends Component {
     };
   }
 
+  /* function declarations for components rendering */
+  getQuestionOrResult() {
+    const currentQuestionIndex = this.state.currentQuestionIndex;
+    const closingQuestionIndex = this.state.questionsData.length - 1;
+    let questionOrResult
+    if (currentQuestionIndex > closingQuestionIndex) {
+      questionOrResult = this.renderResult();
+    } else {
+      questionOrResult = this.renderQuestion(currentQuestionIndex);
+    }
+    return questionOrResult;
+  }
+
   renderQuestion(currentQuestionIndex) {
     return (
       <Question 
@@ -52,6 +65,7 @@ class Quiz extends Component {
     );
   }
 
+  /* navigate the questions */
   handleNavigationClick(e) {
     let currentQuestionIndex = this.state.currentQuestionIndex;
     if (e.target.className === 'prev' && currentQuestionIndex > 0) {
@@ -64,6 +78,7 @@ class Quiz extends Component {
     this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
   }
 
+  /* apply transition effect for image on load */
   handleImageLoad() {
     const imageClassName = 'question__image visible';
     /* although handleImageLoad() is passed as a callback, the animation defined for the visible class
@@ -71,6 +86,7 @@ class Quiz extends Component {
     setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 50);
   }
 
+  /* function declarations for processing quiz answers */
   handleQuestionClick(currentQuestionIndex, e) {
     if (e.target.tagName !== 'LI' || this.state.classNames[currentQuestionIndex].done === 'question-is-done') {
       return;
@@ -112,6 +128,7 @@ class Quiz extends Component {
     }
   }
 
+  /* reset quiz */
   handleResetQuizClick() {
     const currentQuestionIndex = 0;
     const counterRight = 0;
@@ -132,19 +149,6 @@ class Quiz extends Component {
     });
   }
   
-
-  getQuestionOrResult() {
-    const currentQuestionIndex = this.state.currentQuestionIndex;
-    const closingQuestionIndex = this.state.questionsData.length - 1;
-    let questionOrResult
-    if (currentQuestionIndex > closingQuestionIndex) {
-      questionOrResult = this.renderResult();
-    } else {
-      questionOrResult = this.renderQuestion(currentQuestionIndex);
-    }
-    return questionOrResult;
-  }
-
   render() {
     return (
       <div>
