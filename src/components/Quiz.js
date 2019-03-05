@@ -95,8 +95,7 @@ class Quiz extends Component {
     /* When an array of objects is copied with .slice() method 
        or with a spread operator (const classNames = [...this.state.classNames]) 
        the properties of the objects in the new array should not be changed directly via an assignment 
-       because it will change these values in the this.state as well. Instead assign the properties 
-       to variables, change the variables and call setState(). */
+       because it will change these values in the this.state as well. The objects in the array should be copied first, the copied objects changed and used in the setState() call. */
     const classNames = this.state.classNames.slice();
     classNames[currentQuestionIndex] = { ...classNames[currentQuestionIndex] };
     const objectKeyTarget = e.target.id;
