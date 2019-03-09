@@ -22,7 +22,7 @@ class Quiz extends Component {
   getQuestionOrResult() {
     const currentQuestionIndex = this.state.currentQuestionIndex;
     const closingQuestionIndex = this.state.questionsData.length - 1;
-    let questionOrResult
+    let questionOrResult;
     if (currentQuestionIndex > closingQuestionIndex) {
       questionOrResult = this.renderResult();
     } else {
