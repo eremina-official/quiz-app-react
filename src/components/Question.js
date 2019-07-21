@@ -3,8 +3,7 @@ import React from 'react';
 const Question = ( 
   { /* destructure props */
     questionsData: { number, image, hint, variants, correctVariant, description }, 
-    classNames: { answerOne, answerTwo, answerThree, done }, 
-    imageClassName, 
+    classNames: { answerOne, answerTwo, answerThree, done },  
     onClick 
   }
 
@@ -14,7 +13,7 @@ const Question = (
       <div className="question">
         <p className="question__number">Pytanie {number} z 8</p>
     
-        <img src={image} alt="person" className={imageClassName} />
+        <img src={image} alt="person" className="question__image" />
   
         <p className="question__hint"> {hint} </p>
   

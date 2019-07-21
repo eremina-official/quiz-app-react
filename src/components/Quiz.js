@@ -14,7 +14,6 @@ class Quiz extends Component {
       counterWrong: 0,
       questionsData: questionsData,
       classNames: classNames,
-      imageClassName: 'question__image visible'
     };
   }
 
@@ -36,7 +35,6 @@ class Quiz extends Component {
       <Question 
         questionsData={this.state.questionsData[currentQuestionIndex]}
         classNames={this.state.classNames[currentQuestionIndex]} 
-        imageClassName={this.state.imageClassName}
         onClick={(e) => this.handleQuestionClick(currentQuestionIndex, e)}
       />
     );
@@ -74,16 +72,7 @@ class Quiz extends Component {
     if (e.target.className === 'next' && currentQuestionIndex < this.state.questionsData.length) {
       currentQuestionIndex = currentQuestionIndex + 1;
     }
-    const imageClassName = 'question__image';
-    this.setState({currentQuestionIndex: currentQuestionIndex, imageClassName: imageClassName}, this.handleImageLoad);
-  }
-
-  /* apply transition effect for image on load */
-  handleImageLoad() {
-    const imageClassName = 'question__image visible';
-    /* although handleImageLoad() is passed as a callback, the animation defined for the visible class
-    does not work properly without setting this class for the image with a setTimeout() method */
-    setTimeout(() => { this.setState({imageClassName: imageClassName}) }, 50);
+    this.setState({currentQuestionIndex: currentQuestionIndex});
   }
 
   /* function declarations for processing quiz answers */

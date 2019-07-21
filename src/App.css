@@ -67,18 +67,6 @@ h1 {
   width: auto;
   height: 300px;
   margin: auto;
-  opacity: 0;
-}
-
-.visible {
-  animation-name: makevisible;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes makevisible {
-  from {opacity: 0;}
-  to {opacity: 1;}
 }
 
 .question__hint {
