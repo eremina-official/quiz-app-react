@@ -1,0 +1,31 @@
+{
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/forbid-prop-types": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-curly-newline": "off",
+    "react/function-component-definition": "off",
+    "prettier/prettier": ["error",{
+      "endOfLine": "auto",
+      "semi": true,
+      "singleQuote": true}
+    ]
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "react-app",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "module": true,
+    "process": true
+  }
+}
