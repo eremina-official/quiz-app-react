@@ -21,7 +21,7 @@ function App() {
 
         <h1>Zgadnij kim jest ta postać</h1>
 
-        <div className="quiz-container">
+        <div className="quiz">
           <Quiz />
         </div>
       </div>

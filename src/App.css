@@ -34,8 +34,8 @@ h1 {
   margin: 1em 0 0 0;
 }
 
-.quiz-container {
-  padding: 16px;
+.quiz {
+  padding: 16px 30px;
 }
 
 .navigation {
@@ -69,6 +69,7 @@ h1 {
 
 .question__data {
   padding: 28px 0 0;
+  flex: 1 1 350px;
 }
 
 .question__image__number {
@@ -150,7 +151,7 @@ h1 {
   color: white;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 950px) {
   header {
     padding: 12px 0;
   }
@@ -161,6 +162,10 @@ h1 {
 
   h1 {
     font-size: 120%;
+  }
+
+  .quiz {
+    padding: 16px;
   }
 
   .question__image__img {
