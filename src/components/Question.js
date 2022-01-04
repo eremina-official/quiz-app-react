@@ -60,8 +60,12 @@ const Question = ({
 
 Question.propTypes = {
   questionsData: PropTypes.object.isRequired,
-  selectedVariant: PropTypes.string.isRequired,
+  selectedVariant: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+};
+
+Question.defaultProps = {
+  selectedVariant: '',
 };
 
 export default Question;
