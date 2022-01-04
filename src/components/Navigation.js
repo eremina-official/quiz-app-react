@@ -3,8 +3,21 @@ import React from 'react';
 const Navigation = ({ className, onClick }) => {
   return (
     <div className={className}>
-      <div className="prev" onClick={() => onClick('prev')}>Wstecz</div>
-      <div className="next" onClick={() => onClick('next')}>Do przodu</div>
+      <button
+        type="button"
+        className="button-navigation"
+        onClick={() => onClick('prev')}
+      >
+        Wstecz
+      </button>
+
+      <button
+        type="button"
+        className="button-navigation"
+        onClick={() => onClick('next')}
+      >
+        Do przodu
+      </button>
     </div>
   );
 };

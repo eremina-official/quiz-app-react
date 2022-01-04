@@ -16,9 +16,9 @@ const Result = ({
         <p className="no-result">Proszę odpowiedzieć na wszystkie pytania.</p>
       )}
 
-      <div className="button-reset" onClick={onClick}>
+      <button type="button" className="button-reset" onClick={onClick}>
         Resetuj quiz
-      </div>
+      </button>
     </div>
   );
 };

@@ -38,9 +38,10 @@ h1 {
 
 .navigation {
   display: flex;
+  justify-content: space-between;
 }
 
-.prev, .next {
+.button-navigation {
   padding: 6px 12px;
   border: 1px solid gray;
   width: 100px;
@@ -49,11 +50,7 @@ h1 {
   cursor: pointer;
 }
 
-.next {
-  margin-left: auto;
-}
-
-.prev:hover, .next:hover {
+.button-navigation:hover {
   background-color: gray;
   color: white;
 }
@@ -76,13 +73,16 @@ h1 {
 }
 
 .question__variants {
-  list-style-type: none;
   margin: 0;
   padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .answer {
   padding: 6px;
+  border: none;
   cursor: pointer;
 }
 
@@ -121,6 +121,7 @@ h1 {
   width: 8em;
   margin: 2em auto 6em;
   padding: 6px;
+  display: block;
   border: 1px solid gray;
   text-align: center;
   cursor: pointer;
