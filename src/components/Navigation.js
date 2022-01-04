@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Navigation = ({ className, onClick }) => {
   return (
@@ -20,6 +21,11 @@ const Navigation = ({ className, onClick }) => {
       </button>
     </div>
   );
+};
+
+Navigation.propTypes = {
+  className: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Navigation;

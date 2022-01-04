@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Question = ({
   /* destructure props */
@@ -55,6 +56,12 @@ const Question = ({
       </div>
     </div>
   );
+};
+
+Question.propTypes = {
+  questionsData: PropTypes.object.isRequired,
+  selectedVariant: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Question;

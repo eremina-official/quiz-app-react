@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Result = ({
   questionNumber,
@@ -21,6 +22,13 @@ const Result = ({
       </button>
     </div>
   );
+};
+
+Result.propTypes = {
+  questionNumber: PropTypes.number.isRequired,
+  totalAnswerCount: PropTypes.number.isRequired,
+  counterRight: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Result;
