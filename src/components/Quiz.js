@@ -12,6 +12,7 @@ class Quiz extends Component {
       counterRight: 0,
       counterWrong: 0,
       questionsData: data,
+      questionsNumber: data.length,
       selectedVariants: Array(data.length),
     };
 
@@ -23,16 +24,7 @@ class Quiz extends Component {
   /* navigate the questions */
   handleNavigationClick(value) {
     let { currentQuestionIndex } = this.state;
-    if (value === 'prev' && currentQuestionIndex > 0) {
-      currentQuestionIndex -= 1;
-    }
-    if (
-      value === 'next' &&
-      currentQuestionIndex < this.state.questionsData.length
-    ) {
-      currentQuestionIndex += 1;
-    }
-    this.setState({ currentQuestionIndex });
+    this.setState({ currentQuestionIndex: (currentQuestionIndex += value) });
   }
 
   /* function declarations for processing quiz answers */
@@ -88,20 +80,27 @@ class Quiz extends Component {
   }
 
   render() {
-    const { currentQuestionIndex } = this.state;
+    const {
+      currentQuestionIndex,
+      questionsNumber,
+      counterRight,
+      counterWrong,
+    } = this.state;
 
     return (
       <div>
         <Navigation
           className="navigation"
+          currentQuestionIndex={currentQuestionIndex}
+          questionsNumber={questionsNumber}
           onClick={this.handleNavigationClick}
         />
 
-        {currentQuestionIndex > this.state.questionsData.length - 1 ? (
+        {currentQuestionIndex > questionsNumber - 1 ? (
           <Result
-            counterRight={this.state.counterRight}
-            questionNumber={this.state.questionsData.length}
-            totalAnswerCount={this.state.counterRight + this.state.counterWrong}
+            counterRight={counterRight}
+            questionNumber={questionsNumber}
+            totalAnswerCount={counterRight + counterWrong}
             onClick={() => this.handleResetQuizClick()}
           />
         ) : (
@@ -114,6 +113,8 @@ class Quiz extends Component {
 
         <Navigation
           className="navigation navigation-bottom"
+          currentQuestionIndex={currentQuestionIndex}
+          questionsNumber={questionsNumber}
           onClick={this.handleNavigationClick}
         />
       </div>
