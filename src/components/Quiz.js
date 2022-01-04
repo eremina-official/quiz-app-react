@@ -63,16 +63,14 @@ class Quiz extends Component {
   }
 
   runCounter(counter) {
-    let { counterRight, counterWrong } = this.state;
     if (counter === 'right') {
-      /* Direct assignment here is valid because we copied the counterRight 
-      to a separate variable and primitive data types in JavaScript are copied 
-      by value (not by reference) */
-      counterRight += 1;
-      this.setState({ counterRight });
+      this.setState((prevState) => ({
+        counterRight: prevState.counterRight + 1,
+      }));
     } else {
-      counterWrong += 1;
-      this.setState({ counterWrong });
+      this.setState((prevState) => ({
+        counterWrong: prevState.counterWrong + 1,
+      }));
     }
   }
 
