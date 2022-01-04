@@ -22,8 +22,9 @@ class Quiz extends Component {
   }
 
   handleNavigationClick(value) {
-    let { currentQuestionIndex } = this.state;
-    this.setState({ currentQuestionIndex: (currentQuestionIndex += value) });
+    this.setState((prevState) => ({
+      currentQuestionIndex: prevState.currentQuestionIndex + value,
+    }));
   }
 
   handleQuestionClick(selectedVariant) {
