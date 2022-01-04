@@ -21,13 +21,11 @@ class Quiz extends Component {
     this.handleResetQuizClick = this.handleResetQuizClick.bind(this);
   }
 
-  /* navigate the questions */
   handleNavigationClick(value) {
     let { currentQuestionIndex } = this.state;
     this.setState({ currentQuestionIndex: (currentQuestionIndex += value) });
   }
 
-  /* function declarations for processing quiz answers */
   handleQuestionClick(selectedVariant) {
     /* When an array of objects is copied with .slice() method 
        or with a spread operator (const classNames = [...this.state.classNames]) 
@@ -55,7 +53,6 @@ class Quiz extends Component {
     this.setState({ selectedVariants: selectedVariantsCopy });
   }
 
-  /* reset quiz */
   handleResetQuizClick() {
     this.setState({
       currentQuestionIndex: 0,
