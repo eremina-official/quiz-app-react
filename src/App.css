@@ -1,4 +1,10 @@
-.App {
+.app {
+}
+
+.quiz-wrapper {
+  max-width: 950px;
+  min-height: 100vh;
+  margin: auto;
 }
 
 .header {
@@ -6,8 +12,6 @@
   display: flex;
   align-items: center;
   color: white;
-  max-width: 1024px;
-  margin: auto;
 }
 
 .header__title {
@@ -27,12 +31,10 @@ h1 {
   line-height: 1.2;
   text-align: center;
   color: #444444;
-  margin: 0.4em 0 0 0;
+  margin: 1em 0 0 0;
 }
 
 .quiz-container {
-  max-width: 1024px;
-  margin: auto;
   padding: 16px;
 }
 
@@ -55,24 +57,38 @@ h1 {
   color: white;
 }
 
-.question__number {
-  margin: 12px 0 4px;
+.question {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .question__image {
+  padding-right: 50px;
+}
+
+.question__data {
+  padding: 28px 0 0;
+}
+
+.question__image__number {
+  margin: 0 0 14px;
+}
+
+.question__image__img {
   display: block;
   width: auto;
   height: 300px;
   margin: auto;
 }
 
-.question__hint {
-  margin: 4px 0 0 0;
+.question__data__hint {
+  margin: 0;
   font-style: italic;
   color: #666666;
 }
 
-.question__variants {
+.question__data__variants {
   margin: 0;
   padding: 16px 0;
   display: flex;
@@ -83,6 +99,8 @@ h1 {
 .answer {
   padding: 6px;
   border: none;
+  font-size: 14px;
+  background-color: white;
   cursor: pointer;
 }
 
@@ -145,7 +163,7 @@ h1 {
     font-size: 120%;
   }
 
-  .question__image {
+  .question__image__img {
     height: 380px;
   }
   
