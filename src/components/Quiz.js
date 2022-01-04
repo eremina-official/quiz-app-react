@@ -44,6 +44,10 @@ class Quiz extends Component {
        copied first, the copied objects changed and used in the setState() call. */
 
     const { selectedVariants, currentQuestionIndex } = this.state;
+
+    // don't handle click if there is an answer for this question already
+    if (selectedVariants[currentQuestionIndex]) return;
+
     const selectedVariantsCopy = [...selectedVariants];
     selectedVariantsCopy[currentQuestionIndex] = selectedVariant;
 
