@@ -40,7 +40,6 @@ h1 {
 
 .navigation {
   display: flex;
-  justify-content: space-between;
 }
 
 .button-navigation {
@@ -55,6 +54,10 @@ h1 {
 .button-navigation:hover {
   background-color: gray;
   color: white;
+}
+
+.button-navigation-next {
+  margin-left: auto;
 }
 
 .question {
