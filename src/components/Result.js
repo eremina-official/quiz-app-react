@@ -1,14 +1,24 @@
 import React from 'react';
 
-const Result = ( { questionNumber, message, counterRight, onClick } ) => {
+const Result = ({
+  questionNumber,
+  totalAnswerCount,
+  counterRight,
+  onClick,
+}) => {
   return (
     <div>
-      <p className="no-result">{message}</p>
+      {questionNumber === totalAnswerCount ? (
+        <p className="result">
+          Wynik: {counterRight} z {questionNumber}.
+        </p>
+      ) : (
+        <p className="no-result">Proszę odpowiedzieć na wszystkie pytania.</p>
+      )}
 
-      { questionNumber &&
-      <p className="result">Wynik: {counterRight} z {questionNumber}.</p> }
-
-      <div className="button-reset" onClick={onClick}>Resetuj quiz</div>
+      <div className="button-reset" onClick={onClick}>
+        Resetuj quiz
+      </div>
     </div>
   );
 };
