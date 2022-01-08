@@ -2,16 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Result = ({
-  questionNumber,
+  questionsNumber,
   totalAnswerCount,
   counterRight,
   onClick,
 }) => {
   return (
     <div>
-      {questionNumber === totalAnswerCount ? (
+      {questionsNumber ===
+      totalAnswerCount.filter((answer) => answer).length ? (
         <p className="result">
-          Wynik: {counterRight} z {questionNumber}.
+          Wynik: {counterRight} z {questionsNumber}.
         </p>
       ) : (
         <p className="no-result">Proszę odpowiedzieć na wszystkie pytania.</p>
@@ -25,8 +26,8 @@ const Result = ({
 };
 
 Result.propTypes = {
-  questionNumber: PropTypes.number.isRequired,
-  totalAnswerCount: PropTypes.number.isRequired,
+  questionsNumber: PropTypes.number.isRequired,
+  totalAnswerCount: PropTypes.array.isRequired,
   counterRight: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 };
