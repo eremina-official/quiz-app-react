@@ -42,21 +42,21 @@ h1 {
   display: flex;
 }
 
-.button-navigation {
-  padding: 6px 12px;
-  border: 1px solid gray;
-  width: 100px;
-  text-align: center;
-  font-size: 14px;
+.button {
+  padding: 10px 12px;
+  width: 130px;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius-standard);
+  font-size: 16px;
   cursor: pointer;
 }
 
-.button-navigation:hover {
-  background-color: gray;
+.button:hover {
+  background-color: var(--primary-color);
   color: white;
 }
 
-.button-navigation-next {
+.button--navigation-next {
   margin-left: auto;
 }
 
@@ -144,21 +144,6 @@ h1 {
 .result, .no-result {
   margin-bottom: 2em;
   font-weight: bold;
-}
-
-.button-reset {
-  width: 8em;
-  margin: 2em auto 6em;
-  padding: 6px;
-  display: block;
-  border: 1px solid gray;
-  text-align: center;
-  cursor: pointer;
-}
-
-.button-reset:hover {
-  background-color: gray;
-  color: white;
 }
 
 @media only screen and (min-width: 950px) {

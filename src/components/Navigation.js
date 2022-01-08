@@ -10,11 +10,7 @@ const Navigation = ({
   return (
     <div className={className}>
       {currentQuestionIndex > 0 && (
-        <button
-          type="button"
-          className="button-navigation"
-          onClick={() => onClick(-1)}
-        >
+        <button type="button" className="button" onClick={() => onClick(-1)}>
           Wstecz
         </button>
       )}
@@ -22,7 +18,7 @@ const Navigation = ({
       {currentQuestionIndex < questionsNumber && (
         <button
           type="button"
-          className="button-navigation button-navigation-next"
+          className="button button--navigation-next"
           onClick={() => onClick(1)}
         >
           Do przodu
