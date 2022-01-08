@@ -7,16 +7,16 @@ const Result = ({
   counterRight,
   onClick,
 }) => {
+  const allQuestionsDone =
+    questionsNumber === totalAnswerCount.filter((answer) => answer).length;
+
   return (
     <div className="result-wrapper">
-      {questionsNumber ===
-      totalAnswerCount.filter((answer) => answer).length ? (
-        <p className="result">
-          Wynik: {counterRight} z {questionsNumber}.
-        </p>
-      ) : (
-        <p className="no-result">Proszę odpowiedzieć na wszystkie pytania.</p>
-      )}
+      <p className="result">
+        {allQuestionsDone
+          ? `Wynik: ${counterRight} z ${questionsNumber}.`
+          : 'Proszę odpowiedzieć na wszystkie pytania.'}
+      </p>
 
       <button type="button" className="button" onClick={onClick}>
         Resetuj quiz
