@@ -8,7 +8,7 @@ const Result = ({
   onClick,
 }) => {
   return (
-    <div>
+    <div className="result-wrapper">
       {questionsNumber ===
       totalAnswerCount.filter((answer) => answer).length ? (
         <p className="result">
