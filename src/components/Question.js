@@ -19,7 +19,7 @@ const Question = ({
         <div className="question__data">
           <p className="question__data__hint">{hint}</p>
 
-          <div className="question__data__variants">
+          <ul className="question__data__variants">
             {variants.map((variant) => {
               let answerClassName = 'answer';
               if (selectedVariant && variant === correctVariant) {
@@ -34,17 +34,14 @@ const Question = ({
               }
 
               return (
-                <button
-                  type="button"
-                  className={answerClassName}
-                  key={variant}
-                  onClick={() => onClick(variant)}
-                >
-                  {variant}
-                </button>
+                <li className={answerClassName} key={variant}>
+                  <button type="button" onClick={() => onClick(variant)}>
+                    {variant}
+                  </button>
+                </li>
               );
             })}
-          </div>
+          </ul>
 
           {selectedVariant && (
             <div className="description">

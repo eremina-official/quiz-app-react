@@ -48,7 +48,7 @@ class Quiz extends Component {
       this.state;
 
     return (
-      <div>
+      <>
         <Navigation
           className="navigation"
           currentQuestionIndex={currentQuestionIndex}
@@ -76,7 +76,7 @@ class Quiz extends Component {
           questionsNumber={questionsNumber}
           onClick={this.handleNavigationClick}
         />
-      </div>
+      </>
     );
   }
 }

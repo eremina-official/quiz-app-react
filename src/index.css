@@ -13,3 +13,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* variables */
+
+:root {
+  --border-radius-standard: 3px;
+  --primary-color: #22272E;
+  --font-color: #ADBAC7;
+  --font-color-rgb: 173, 186, 199;
+  --font-color-transparent: rgba(var(--font-color-rgb), 0.2);
+}

@@ -2,24 +2,35 @@ import React from 'react';
 import './App.css';
 import Quiz from './components/Quiz';
 
-/* Quiz Component has a state 
-   Navigation sends info about which question is to be rendered
-   Question receives props from Quiz and renders question 
-   Result receives props from Quiz and renders result
-*/
-
 function App() {
   return (
     <div className="app">
-      <div className="quiz-wrapper">
-        <header className="header">
-          <p className="header__title">Quiz historyczny</p>
-          <p className="header__credits">
-            Żródło zdjęć: <br /> Wikimedia Commons
-          </p>
-        </header>
+      <header className="header">
+        <span>
+          View code on{' '}
+          <a
+            href="https://github.com/eremina-official/quiz-app-react"
+            alt="source-code"
+          >
+            GitHub
+          </a>
+        </span>
 
-        <h1>Zgadnij kim jest ta postać</h1>
+        <span className="header__credits">
+          Żródło zdjęć{' '}
+          <a
+            href="https://commons.wikimedia.org/wiki/Main_Page"
+            alt="images-source"
+          >
+            Wikimedia Commons
+          </a>
+        </span>
+      </header>
+
+      <div className="quiz-wrapper">
+        <h1>Quiz historyczny</h1>
+
+        <p className="subtitle">Zgadnij kim jest ta postać</p>
 
         <div className="quiz">
           <Quiz />
