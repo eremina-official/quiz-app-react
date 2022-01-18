@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import data from '../quiz-data/questions-data';
 
-const Result = ({
-  questionsNumber,
-  totalAnswerCount,
-  counterRight,
-  onClick,
-}) => {
+const Result = ({ questionsNumber, totalAnswerCount, onClick }) => {
   const allQuestionsDone =
     questionsNumber === totalAnswerCount.filter((answer) => answer).length;
+
+  const correctAnswerCount = totalAnswerCount
+    .map((answer, index) => answer === data[index].correctVariant)
+    .filter((answer) => answer).length;
 
   return (
     <div className="result-wrapper">
       <p className="result">
         {allQuestionsDone
-          ? `Wynik: ${counterRight} z ${questionsNumber}.`
+          ? `Wynik: ${correctAnswerCount} z ${data.length}.`
           : 'Proszę odpowiedzieć na wszystkie pytania.'}
       </p>
 
@@ -28,7 +28,6 @@ const Result = ({
 Result.propTypes = {
   questionsNumber: PropTypes.number.isRequired,
   totalAnswerCount: PropTypes.array.isRequired,
-  counterRight: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
