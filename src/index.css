@@ -23,9 +23,14 @@ code {
 /* variables */
 
 :root {
-  --border-radius-standard: 3px;
-  --primary-color: #22272E;
   --font-color: #ADBAC7;
   --font-color-rgb: 173, 186, 199;
-  --font-color-transparent: rgba(var(--font-color-rgb), 0.2);
+
+  --border-radius-standard: 3px;
+  --color-button-border: #22272E;
+  --color-button-bg: rgba(var(--font-color-rgb), 0.2);
+
+  --color-header-bg: #282c34;
+  
+  --color-text-hover: rgba(var(--font-color-rgb), 0.6);
 }
