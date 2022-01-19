@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/quiz-app-react/static/css/main.6a78335c.css",
+    "main.js": "/quiz-app-react/static/js/main.3394da1c.js",
+    "static/media/Alexander-the-Great.jpg": "/quiz-app-react/static/media/Alexander-the-Great.e50d07931d87f1ecf0e5.jpg",
+    "static/media/Charlemagne.jpg": "/quiz-app-react/static/media/Charlemagne.33980f6e01c0d000c3d3.jpg",
+    "static/media/Engels.jpg": "/quiz-app-react/static/media/Engels.d82d91d57cdb450c6e8d.jpg",
+    "static/media/Genghis.jpg": "/quiz-app-react/static/media/Genghis.3e4fa6d7e20954ecd855.jpg",
+    "static/media/Zuma.jpg": "/quiz-app-react/static/media/Zuma.d1f1e213975fc2602846.jpg",
+    "static/media/Napoleon.jpg": "/quiz-app-react/static/media/Napoleon.7fc455af65525340a276.jpg",
+    "static/media/Thatcher.jpg": "/quiz-app-react/static/media/Thatcher.ce42b6beb3d8bd47ce89.jpg",
+    "static/media/Tito.jpg": "/quiz-app-react/static/media/Tito.f9d3bb170dc70ff2e99e.jpg",
+    "index.html": "/quiz-app-react/index.html",
+    "main.6a78335c.css.map": "/quiz-app-react/static/css/main.6a78335c.css.map",
+    "main.3394da1c.js.map": "/quiz-app-react/static/js/main.3394da1c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a78335c.css",
+    "static/js/main.3394da1c.js"
+  ]
+}
