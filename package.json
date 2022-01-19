@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://eremina-official.github.io/quiz-app-react",
   "dependencies": {
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.2.0",
     "prop-types": "^15.8.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
